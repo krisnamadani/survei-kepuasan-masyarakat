@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/login', '\App\Http\Controllers\AuthController@login')->name('login');
 Route::post('/login', '\App\Http\Controllers\AuthController@loginPost')->name('login.post');
 Route::get('/logout', '\App\Http\Controllers\AuthController@logout')->name('logout');
+
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
+    Route::get('/dashboard', '\App\Http\Controllers\Admin\DashboardController@index')->name('admin.dashboard');
+});
