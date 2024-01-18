@@ -56,15 +56,6 @@
     </div>
     <!-- /.login-card-body -->
   </div>
-  @if ($errors->any())
-    @foreach ($errors->all() as $error)
-    <div class="alert alert-danger alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      {{ $error }}
-    </div>
-    @endforeach
-  @endif
-
   @if (session('error'))
   <div class="alert alert-danger alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
