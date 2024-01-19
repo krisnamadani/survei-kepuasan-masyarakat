@@ -21,7 +21,7 @@ class CreateRespondentsTable extends Migration
             $table->string('education');
             $table->string('occupation');
             $table->string('institution')->nullable();
-            $table->string('service')->nullable();
+            $table->string('services')->nullable();
             $table->string('answer1');
             $table->string('answer2');
             $table->string('answer3');
