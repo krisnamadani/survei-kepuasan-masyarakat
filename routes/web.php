@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', '\App\Http\Controllers\IndexController@index')->name('index');
+Route::get('/questionnaire', '\App\Http\Controllers\IndexController@questionnaire')->name('questionnaire');
+Route::post('/questionnaire', '\App\Http\Controllers\IndexController@questionnairePost')->name('questionnaire.post');
+Route::get('/report', '\App\Http\Controllers\IndexController@report')->name('report');
 
 Route::get('/login', '\App\Http\Controllers\AuthController@login')->name('login');
 Route::post('/login', '\App\Http\Controllers\AuthController@loginPost')->name('login.post');
