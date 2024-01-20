@@ -28,6 +28,8 @@ class IndexController extends Controller
 
     public function report()
     {
-        return view('report');
+        $reports = \App\Report::orderBy('created_at', 'desc')->get();
+
+        return view('report', compact('reports'));
     }
 }
