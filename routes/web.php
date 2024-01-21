@@ -25,5 +25,5 @@ Route::get('/logout', '\App\Http\Controllers\AuthController@logout')->name('logo
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/dashboard', '\App\Http\Controllers\Admin\DashboardController@index')->name('admin.dashboard');
 
-    Route::get('/respondents', '\App\Http\Controllers\Admin\RespondentController@index')->name('admin.respondents');
+    Route::get('/respondent', '\App\Http\Controllers\Admin\RespondentController@index')->name('admin.respondent');
 });

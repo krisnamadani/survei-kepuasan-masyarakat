@@ -9,6 +9,8 @@ class RespondentController extends Controller
 {
     public function index()
     {
-        return view('admin.respondents');
+        $respondents = \App\Respondent::all();
+
+        return view('admin.respondent', compact('respondents'));
     }
 }
